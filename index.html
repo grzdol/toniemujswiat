@@ -28,10 +28,36 @@
             max-width: 80%;
             height: auto;
         }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 100px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 120%; 
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <h1>Wybrałem sam</h1>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU3QdDvWUMEaBdtmKLNEbLRRhmYr8hOpX2WQ&s" alt="Artur Rojek">
+    <a href="https://grzdol.github.io/szafagrajaca/" class="tooltip">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU3QdDvWUMEaBdtmKLNEbLRRhmYr8hOpX2WQ&s" alt="Artur Rojek">
+        <span class="tooltip-text">gołe baby</span>
+    </a>
 </body>
 </html>
